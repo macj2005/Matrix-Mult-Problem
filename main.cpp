@@ -103,17 +103,17 @@ int main(int argc, const char * argv[]) {
     int n;
     vector<Matrix> matrixList;
     vector<int> p;
-    //ifstream inputFile;
+    ifstream inputFile;
     
-    //inputFile.open("data.txt");
+    inputFile.open("data.txt");
     
-    cin >> n;
+    inputFile >> n;
     for (int i = 0; i < n; i++) {
         int r, c;
-        cin >> r >> c;
+        inputFile >> r >> c;
         matrixList.push_back(Matrix(r, c));
     }
-    //inputFile.close();
+    inputFile.close();
     
     p.push_back(matrixList[0].getRows());
     for (unsigned int i = 0; i < matrixList.size(); i++) {
